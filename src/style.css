@@ -1,0 +1,71 @@
+/* Basic styling for the entire body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* A light, clean background color */
+    color: #333; /* A dark gray for text, easy on the eyes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures the body takes up at least the full viewport height */
+    margin: 0;
+}
+
+/* Container for the main content */
+.container {
+    background-color: #fff; /* White background for the main card */
+    padding: 2rem;
+    border-radius: 8px; /* Slightly rounded corners for a modern look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* A subtle shadow to lift the card off the page */
+    width: 90%;
+    max-width: 700px; /* Limits the max width on large screens */
+    text-align: center;
+}
+
+/* Heading styles */
+h1 {
+    color: #4a90e2; /* A professional blue for the main heading */
+}
+
+/* Text area for user input */
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    margin: 1rem 0;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+    resize: vertical; /* Allows resizing only vertically */
+}
+
+/* Button styles */
+button {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer; /* Indicates the button is clickable */
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+button:hover {
+    background-color: #357bd9; /* Darker blue on hover */
+}
+
+/* Results section styles */
+.results-container {
+    text-align: left; /* Aligns text to the left within this section */
+    margin-top: 2rem;
+    border-top: 1px solid #eee; /* Separator line above the results */
+    padding-top: 1rem;
+}
+
+.results-container h2 {
+    color: #333;
+}
+
+.results-container p {
+    margin: 0.5rem 0; /* Spacing between result lines */
+}
