@@ -10,3 +10,7 @@ node_modules/
 .idea/
 *.sublime-project
 *.sublime-workspace
+
+# Environment variables
+.env
+.env.local
