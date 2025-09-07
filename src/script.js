@@ -38,10 +38,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const topWords = sortedWords.slice(0, 5).map(entry => `${entry[0]} (${entry[1]})`).join(', ');
 
         // Update the HTML elements with the calculated values
-        document.getElementById('wordCount').textContent = wordCount;
-        document.getElementById('charCount').textContent = charCount;
-        document.getElementById('sentenceCount').textContent = sentenceCount;
-        document.getElementById('avgWordLength').textContent = isNaN(avgWordLength) ? '0' : avgWordLength;
-        document.getElementById('topWords').textContent = topWords || 'N/A';
+            document.getElementById('wordCount').textContent = wordCount;
+            document.getElementById('charCount').textContent = charCount;
+            document.getElementById('sentenceCount').textContent = sentenceCount;
+            document.getElementById('avgWordLength').textContent = isNaN(avgWordLength) ? '0' : avgWordLength;
+            document.getElementById('topWords').textContent = topWords || 'N/A';
     });
+});
+
+document.getElementById('copyButton').addEventListener('click', () => {
+    const resultsText = document.getElementById('results').innerText;
+    navigator.clipboard.writeText(resultsText)
+        .then(() => alert("Results copied to clipboard!"))
+        .catch(err => console.error("Copy failed", err));
 });
